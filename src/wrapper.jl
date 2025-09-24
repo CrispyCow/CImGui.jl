@@ -1203,7 +1203,9 @@ Formatted text.
 
 [Upstream link](https://github.com/ocornut/imgui/blob/v1.92.1-docking/imgui.h#L613).
 """
-Text(fmt) = igText(fmt)
+function Text(fmt) # used function syntax to avoid conflict with Base.Text in Julia 1.12.0-rc2
+    igText(fmt)
+end
 
 """
 $(TYPEDSIGNATURES)
